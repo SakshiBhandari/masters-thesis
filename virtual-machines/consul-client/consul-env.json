@@ -1,0 +1,4 @@
+{
+    "datacenter": "us-east-1",
+    "bind_addr": "<IP ADREESS OF THE NODE> THIS CAN BE FETCHED USING DESCRIBE INSTANCE COMMAND>"
+}

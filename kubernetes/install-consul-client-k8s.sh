@@ -1,0 +1,2 @@
+#/bin/bash -x
+helm install consul hashicorp/consul --values <LOCATION OF VALUES YAML FILE> --create-namespace --namespace <NAMESPACE NAME> --set env.AWS_DEFAULT_REGION="<AWS REGION NAME>" --version "VERSION TO BE USED>"

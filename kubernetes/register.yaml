@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: kube-consul-register
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: kube-consul-register
+    spec:
+      containers:
+      - name: kube-consul-register
+        image: tczekajlo/kube-consul-register:0.1.4
+        imagePullPolicy: Always
+        resources:
+          requests:
+            cpu: 1
+            memory: 300Mi
+        args:
+        - -logtostderr=true
+        - -configmap=default/kube-consul-register
+        - -in-cluster=true
+  selector:
+    matchLabels:
+      app: kube-consul-register

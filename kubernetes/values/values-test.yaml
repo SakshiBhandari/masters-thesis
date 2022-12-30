@@ -1,0 +1,40 @@
+# # Contains values that affect multiple components of the chart.
+# global:
+#  enabled: false
+# #  gossipEncryption:
+# #     secretName: "consul-gossip"
+# #     secretKey: "key"
+#  name: consul
+#  datacenter: us-east-1
+#  image: "hashicorp/consul:1.11.8"
+#  tls:
+#    enabled: false
+# externalServers:
+#   hosts: ["34.238.156.52"]
+
+# server:
+#  enabled: false
+
+# client:
+#   enabled: true
+#   join: ["34.238.156.52"]
+#   image: "hashicorp/consul:1.11.8"
+#   # exposeGossipPorts: true
+
+# connectInject:
+#  enabled: false
+
+global:
+  enabled: false
+  datacenter: 'us-east-1'
+
+client:
+  enabled: true
+  # Set this to true to expose the Consul clients using the Kubernetes node
+  # IPs. If false, the pod IPs must be routable from the external servers.
+  exposeGossipPorts: true
+  
+  join:
+    - 'provider=aws tag_key=Application tag_value=Consul' 
+connectInject:
+  enabled: true

@@ -1,0 +1,4 @@
+vm.service.us-east-1.consul A
+pod.service.us-east-1.consul A
+iris.service.us-east-1.consul A
+nginx.service.us-east-1.consul A

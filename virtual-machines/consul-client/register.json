@@ -1,0 +1,14 @@
+{
+    "service": {
+      "id": "current-iris-10.148.144.115",
+      "name": "iris",
+      "tags": [
+        "current",
+        "v000",
+        "build-1.1.46876",
+        "us-east-1a",
+        "http_port_8080"
+      ],
+      "port": 8080
+    }
+}

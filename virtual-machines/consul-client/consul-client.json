@@ -1,0 +1,19 @@
+{
+    "dns_config" : {
+      "allow_stale": true
+    },
+    "addresses" : {
+      "http": "0.0.0.0"
+    },
+    "log_level": "INFO",
+    "raft_protocol": 3,
+    "retry_join": ["provider=aws tag_key=Application tag_value=Consul addr_type=private_v4"],
+    "leave_on_terminate": true,
+    "skip_leave_on_interrupt": false,
+    "disable_update_check": true,
+    "disable_remote_exec": false,
+    "enable_script_checks": true,
+    "ui": false,
+    "data_dir": "/var/lib/consul",
+    "server": false
+}
